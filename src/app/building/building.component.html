@@ -1,6 +1,6 @@
-<p>מספר הקומות בבניין הוא {{numOfFloors}}</p>
-<div>
-    <label>בחר את מספר הקומות בבניין:
-      <input [(ngModel)]="numOfFloors" placeholder="0"/>
-    </label>
-  </div>
+<form #form = "ngForm" (ngSubmit) = "updateNumOfFloors(form.value)" >
+    <label> בחר את מספר הקומות בבניין</label>
+    <input type = "text" name = "numOfFloors" placeholder = "100" ngModel>
+    <input type = "submit" value = "אשר">
+</form>
+<p *ngFor="let floor of floors">bla</p>
