@@ -3,4 +3,6 @@
     <input type = "text" name = "numOfFloors" placeholder = "100" ngModel>
     <input type = "submit" value = "אשר">
 </form>
-<p *ngFor="let floor of floors">bla</p>
+<div id="floors" *ngFor="let floor of floors">
+    <img [src]="floor.img"/>
+</div>
