@@ -3,6 +3,13 @@
     <input type = "text" name = "numOfFloors" placeholder = "100" ngModel>
     <input type = "submit" value = "אשר">
 </form>
-<div id="floors" *ngFor="let floor of floors">
-    <img [src]="floor.img"/>
+<div id="result">
+    <div>
+        <div id="floors" *ngFor="let floor of floors">
+            <img [src]="floor.img"/>
+        </div>
+    </div>
+    <div *ngIf="numOfThrows!=1">מספר הזריקות המקסימלי לבצע כדי לגלות את הקומה ממנה מתנפצים הכדורים הוא: 
+        <h2>{{numOfThrows}}</h2>
+    </div>
 </div>

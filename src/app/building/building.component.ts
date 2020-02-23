@@ -12,6 +12,7 @@ export interface Floor {
 })
 export class BuildingComponent implements OnInit {
   floors: Floor[] = [];
+  numOfThrows:number = 1;
 
   constructor() { }
 
@@ -40,6 +41,13 @@ export class BuildingComponent implements OnInit {
       }
       this.floors.push(newFloor);
     }
+    this.calculateMaxNumberOfThrows();
   }
 
+  calculateMaxNumberOfThrows() {
+    while((this.numOfThrows*(this.numOfThrows-1))/2 < this.floors.length) {
+      this.numOfThrows++;
+    }
+    this.numOfThrows = this.numOfThrows-1;
+  }
 }

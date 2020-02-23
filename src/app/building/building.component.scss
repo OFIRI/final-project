@@ -1,8 +1,28 @@
-#floors {
-    height: 30px;
-    width: 70px;
-    img {
+form {
+    label {
+        margin: 2px;
+    }
+    input {
+        margin: 2px;
+    }
+}
+
+#result {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+
+    div {
+        margin: 2px;
+    }
+    
+    #floors {
         height: 30px;
-        width:70px;
+        width: 70px;
+        margin: 0;
+        img {
+            height: 30px;
+            width:70px;
+        }
     }
 }
